@@ -1,4 +1,4 @@
-/* Общие стили для header */
+
 header {
     background: linear-gradient(90deg, #007bff, #00c853); 
     color: white;
@@ -14,18 +14,16 @@ header {
     margin: 0 auto; 
 }
 
-/* Логотип */
 .header-div h1 {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-/* Меню */
 .header-settings ul {
     list-style: none;
     display: flex;
-    align-items: center; /* Выровняли элементы */
+    align-items: center; 
     gap: 20px;
     margin: 0;
     padding: 0;
@@ -36,7 +34,6 @@ header {
     align-items: center;
 }
 
-/* Выравниваем ссылки и кнопки */
 .header-settings a, .header-settings button {
     text-decoration: none;
     color: white;
@@ -45,24 +42,21 @@ header {
     border-radius: 5px;
     height: 40px; 
     display: flex;
-    align-items: center; /* Выровняли текст внутри */
+    align-items: center; 
     justify-content: center;
-    line-height: 1; /* Исправляем возможные различия в высоте */
+    line-height: 1;
 }
 
-/* Hover-эффекты */
 .header-settings a:hover, .header-settings button:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Стили кнопок */
 .header-settings button {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid white;
     cursor: pointer;
 }
 
-/* Hover-эффект для кнопок */
 .header-settings button:hover {
     background: rgba(255, 255, 255, 0.3);
 }

@@ -1,21 +1,39 @@
-body{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
+    justify-content: start;
+    min-height: 100vh; 
 }
-header{
+
+header {
     background: #007bff;
     width: 100%;
 }
-main{
+
+main {
     flex-grow: 1; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-html{
-    box-sizing: border-box;
+
+footer {
     width: 100%;
-    height: 100%;
+    background: linear-gradient(90deg, #007bff, #00c853);
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0); 
 }
