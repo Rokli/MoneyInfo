@@ -1,0 +1,72 @@
+.home-settings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; 
+
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    gap: 20px;
+    width: 70%;
+}
+
+.home-progress-bar{
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.home-progress {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 5px;
+}
+
+.home-button{
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.home-button:hover {
+    background: #0056b3;
+}
+
+.home-balance-amount{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.home-transaction-list {
+    list-style: none;
+    padding: 0;
+}
+
+.home-transaction-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-chart{
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+}

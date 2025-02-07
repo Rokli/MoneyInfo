@@ -6,6 +6,7 @@
     @vite('resources/css/base.css')
     @vite('resources/css/footer.css')
     @vite('resources/css/header.css')
+    @vite('resources/css/home.css')
     <title>Money Info</title>
 </head>
 <body>
@@ -16,5 +17,6 @@
     </main>
 
     @include('footer')
+    @vite('resources/js/home.js');
 </body>
 </html>
