@@ -10,6 +10,7 @@ export default defineConfig({
             'resources/css/header.css',
             'resources/css/budget.css',
             'resources/css/saving.css',
+            'resources/css/profile.css',
             'resources/js/home.js',
             'resources/js/budget.js',
         ],
