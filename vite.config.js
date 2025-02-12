@@ -9,6 +9,7 @@ export default defineConfig({
             'resources/css/footer.css',
             'resources/css/header.css',
             'resources/css/budget.css',
+            'resources/css/saving.css',
             'resources/js/home.js',
             'resources/js/budget.js',
         ],

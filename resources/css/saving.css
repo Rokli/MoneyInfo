@@ -1,0 +1,146 @@
+.saving-progress-container {
+    width: 100%;
+    background: #eee;
+    border-radius: 5px;
+    height: 20px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.saving-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: green;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    transition: width 0.5s;
+    line-height: 20px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #218838;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.savings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.savings-goals, .savings-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.goals-list {
+    list-style: none;
+    padding: 0;
+}
+
+.goals-list li {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: 0.3s ease;
+}
+
+.goals-list li:hover {
+    transform: scale(1.02);
+    background: #eef2f3;
+}
+
+.goal-name {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.goal-amount {
+    color: #333;
+    font-size: 1rem;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #28a745;
+    text-align: center;
+    color: white;
+    font-size: 0.75rem;
+    line-height: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.savings-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.savings-form input:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.savings-form button {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.savings-form button:hover {
+    background: #218838;
+}
+
+.savings-form button:active {
+    transform: scale(0.98);
+}
