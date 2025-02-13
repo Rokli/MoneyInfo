@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/home', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/profile',function(){
     return view('profile');
@@ -24,4 +25,12 @@ Route::get('/saving',function(){
 
 Route::view('/entry','entry');
 
-Route::view('/registration','registration');
+Route::get('/registration',function(){
+    return view('registration');
+});
+
+Route::get('/log',function(){
+    dd(Auth::user());
+});
+
+Route::post('/registration',[RegisterController::class,'createUser'])->name('registration');;
