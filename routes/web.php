@@ -21,3 +21,7 @@ Route::get('/finance',function(){
 Route::get('/saving',function(){
     return view('saving');
 });
+
+Route::view('/entry','entry');
+
+Route::view('/registration','registration');
