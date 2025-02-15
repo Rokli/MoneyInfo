@@ -10,7 +10,7 @@ Route::get('/home', function () {
 
 Route::get('/profile',function(){
     return view('profile');
-});
+})->middleware('auth');
 
 Route::get('/budget',function(){
     return view('budget');
@@ -40,3 +40,16 @@ Route::get('/log',function(){
     dd(Auth::user());
 });
 
+Route::post('/log/logout',[AuthController::class,'logout'])->name('logout');
+
+Route::get('/profile/edit',function(){
+    return view("edit_profile");
+})->name('getProfileEdit');
+
+Route::post('/profile/edit',[AuthController::class,'profileEdit'])->name('postProfileEdit');
+
+Route::get('/profile/edit/password',function(){
+    return view("edit_password");
+})->name('getPasswordEdit');
+
+Route::post('/profile/edit/password',[AuthController::class,'passwordEdit'])->name('postPasswordEdit');
