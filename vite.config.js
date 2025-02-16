@@ -14,6 +14,7 @@ export default defineConfig({
             'resources/css/entry.css',
             'resources/js/home.js',
             'resources/js/budget.js',
+            'resources/js/saving.js',
         ],
             refresh: true,
         }),

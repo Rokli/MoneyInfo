@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SavingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/home', function () {
@@ -53,3 +54,9 @@ Route::get('/profile/edit/password',function(){
 })->name('getPasswordEdit');
 
 Route::post('/profile/edit/password',[AuthController::class,'passwordEdit'])->name('postPasswordEdit');
+
+Route::get('/api/savings',[SavingController::class,'getGoal']);
+
+Route::post('/api/savings',[SavingController::class,'postGoal']);
+
+Route::delete('/api/savings/{goalId}',[SavingController::class,'delete']);

@@ -36,6 +36,21 @@ button:active {
     transform: scale(0.95);
 }
 
+.delete-goal{
+    background: #ca2626;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.delete-goal:hover{
+    background: #a52020;
+}
+
+
 .savings-container {
     display: flex;
     flex-direction: column;
