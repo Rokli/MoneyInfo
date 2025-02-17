@@ -4,8 +4,10 @@
         <nav class="header-settings">
             <ul>
                 <li><a href="/home">Главная</a></li>
+                @if(Auth::check())
                 <li><a href="/budget">Бюджет</a></li>
                 <li><a href="/saving">Сбережения</a></li>
+                @endif
                 <!-- <li><a href="/finance">Финансы</a></li> -->
                 @if(!Auth::check())
                 <li><a href="{{ route('getAuth') }}">Вход</a></li>

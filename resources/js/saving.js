@@ -11,7 +11,7 @@ async function loadGoals(){
     }
 
     const goals = await response.json();
-    console.log('Ответ API:', goals);
+    
     let goalsHtml = '';
     goals.forEach(goal => {
         let progress = (goal.savings / goal.target) * 100;
@@ -67,4 +67,7 @@ async function addGoal(){
 }
 
 document.getElementById('saving-add-goal-btn').addEventListener('click', addGoal);
-loadGoals();
+
+document.addEventListener('DOMContentLoaded',() => {
+    loadGoals();
+})

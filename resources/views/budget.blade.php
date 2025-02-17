@@ -12,18 +12,15 @@
         </div>
         <h3>Категории</h3>
         <div class="home-content" style="width:40%;">
-            <ul class="budget-ul">
-                <li>Квартира: 5к</li>
-                <li>Подписки: 7к</li>
-                <li>Игры: 8к</li>
+            <ul class="budget-ul" id="budget-ul">
             </ul>
         </div>
         <div class="home-content" style="width:40%;">
-            <form method="GET" action="/budget" class="budget-form">
+            <form method="POST" action="/api/budget" class="budget-form">
                 @csrf
                 <div class="budget-form-content">
-                <input type="text" name="name" placeholder="Название категории">
-                <select name="type">
+                <input type="text" name="category_name" placeholder="Название категории">
+                <select name="category_type">
                     <option value="income">Доход</option>
                     <option value="expense">Расход</option>
                 </select>
@@ -34,4 +31,4 @@
     </section>
 @endsection
 
-@vite('resources/js/home.js')
+@vite('resources/js/budget.js')

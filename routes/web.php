@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SavingController;
 use Illuminate\Support\Facades\Route;
@@ -15,7 +16,7 @@ Route::get('/profile',function(){
 
 Route::get('/budget',function(){
     return view('budget');
-});
+})->name('budget');
 
 Route::get('/finance',function(){
     return view('finance');
@@ -60,3 +61,7 @@ Route::get('/api/savings',[SavingController::class,'getGoal']);
 Route::post('/api/savings',[SavingController::class,'postGoal']);
 
 Route::delete('/api/savings/{goalId}',[SavingController::class,'delete']);
+
+Route::get('/api/budget',[BudgetController::class,'getCategory']);
+
+Route::post('/api/budget',[BudgetController::class,'postCategory']);
