@@ -65,3 +65,5 @@ Route::delete('/api/savings/{goalId}',[SavingController::class,'delete']);
 Route::get('/api/budget',[BudgetController::class,'getCategory']);
 
 Route::post('/api/budget',[BudgetController::class,'postCategory']);
+
+Route::delete('/api/budget/{categoryId}',[BudgetController::class,'deleteCategory']);

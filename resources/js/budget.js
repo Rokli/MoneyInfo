@@ -17,6 +17,7 @@ async function loadCategory(){
         categoryHtml += `
             <ul class="budget-ul">
                 <li>${category.name}: ${category.price}</li>
+                <button class="budget-button-delete" data-id="${category.id}">Удалить</button>
             </ul>
         `
     });
@@ -25,6 +26,23 @@ async function loadCategory(){
         categoryContainer.innerHTML = categoryHtml;
     } else {
         console.error("Элемент с id 'budget-ul' не найден");
+    }
+    document.querySelectorAll(".budget-button-delete").forEach(btn => {
+        btn.addEventListener('click',deleteCategory);
+    });
+}
+
+async function deleteCategory(event){
+    const dataId = event.target.getAttribute('data-id');
+    const response = await fetch(`api/budget/${dataId}`,{
+        method:"DELETE",
+        headers: {"Accept": "application/json"}
+    });
+
+    if (response.ok) {
+        loadCategory(); 
+    } else {
+        console.error('Ошибка удаления цели');
     }
 }
 

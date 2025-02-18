@@ -162,3 +162,9 @@ h3 {
 .savings-form button:active {
     transform: scale(0.98);
 }
+
+.goal-item{
+    opacity: 0;
+    animation: loadContent 0.5s ease-out forwards;
+}
+

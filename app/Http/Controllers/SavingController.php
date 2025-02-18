@@ -37,6 +37,5 @@ class SavingController extends Controller
         
         $goal->delete();
         return response()->json(['message' => 'Цель удалена'], 200);    
-
     }
 }

@@ -16,7 +16,7 @@ async function loadGoals(){
     goals.forEach(goal => {
         let progress = (goal.savings / goal.target) * 100;
         goalsHtml += `
-        <li>
+        <li class="goal-item">
             <span class="goal-name">${goal.name}</span> — 
             <span class="goal-amount">${goal.target.toLocaleString()}₽</span>
             <div class="progress-container">

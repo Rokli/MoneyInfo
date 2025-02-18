@@ -27,6 +27,15 @@ class BudgetController extends Controller
             'name' => $request->category_name,
             'type' => $typeCategory[$request->category_type],
         ]);
-        return route('budget');
+        return redirect()->route('budget');
+    }
+
+    public function deleteCategory($id){
+        $category = Category::where('id',$id)->where('user_id',Auth::id())->first();
+        if(!$category)
+            return response()->json(['error' => 'Цель не найдена'], 404);
+
+        $category->delete();
+        return response()->json(['message' => 'Цель удалена'], 200);    
     }
 }
