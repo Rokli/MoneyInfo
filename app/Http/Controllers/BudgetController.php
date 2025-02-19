@@ -15,8 +15,8 @@ class BudgetController extends Controller
     public function postCategory(Request $request)
     {
         $typeCategory = [
-            'income' => false,
-            'expense' => true
+            'income' => true,
+            'expense' => false
         ];
         $request->validate([
             'category_name' => 'required|string|max:255',
@@ -37,5 +37,16 @@ class BudgetController extends Controller
 
         $category->delete();
         return response()->json(['message' => 'Цель удалена'], 200);    
+    }
+
+    public function getBalance(){
+        $income = Category::where('user_id',Auth::id())->where('type',1)->sum('price');
+        $expense = Category::where('user_id',Auth::id())->where('type',0)->sum('price');
+        $balance = $income - $expense;
+        return response()->json([
+            "balance" => $balance,
+            "income" => $income,
+            "expense"=> $expense
+        ]);
     }
 }

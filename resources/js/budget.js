@@ -41,9 +41,37 @@ async function deleteCategory(event){
 
     if (response.ok) {
         loadCategory(); 
+        loadBalanceCategory();
     } else {
         console.error('Ошибка удаления цели');
     }
 }
 
+async function loadBalanceCategory(){
+    const response = await fetch('/api/budget/balance',{
+        headers:{
+            'Accept' : 'application/json'
+        }
+    });
+
+    if(!response.ok){
+        console.error("Ошибка загрузки баланса");
+        return;
+    }
+
+    const balance = await response.json();
+    let balanceHtml = `
+        <h2>Общий баланс категорий: <strong>${balance.balance}</strong></h2>
+        <p>Доходы: ${balance.income}₽ </p>
+        <p>Расходы: ${balance.expense}₽</p>
+    `;
+
+    const balanceContainer = document.getElementById('budget-balance');
+    if(balanceContainer){
+        balanceContainer.innerHTML = balanceHtml;
+    }else{
+        console.error("Элемент с id 'budget-balance' не найден");
+    }
+}
 loadCategory();
+loadBalanceCategory();

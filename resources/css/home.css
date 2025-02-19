@@ -28,6 +28,7 @@
 .home-content{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding: 30px;
     margin: 15px;
