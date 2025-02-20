@@ -2,6 +2,26 @@ import Chart from 'chart.js/auto';
 
 const ctx = document.getElementById('balanceChart').getContext('2d');
 
+let modal = document.getElementById("modal");
+let incomeBtn = document.getElementById("incomeBtn");
+let expenceBtn = document.getElementById("expenceBtn");
+let closeModalBtn = document.getElementById("closeModalBtn");
+
+incomeBtn.onclick = () => {
+    modal.style.display = "block";
+};
+
+closeModalBtn.onclick = () => {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+
 const balanceChart = new Chart(ctx,{
     type: "doughnut",
     data: {
@@ -65,6 +85,14 @@ async function addExpence(){
     //TODO:Сначала модальное окно
 }
 
+function openModalWindow(){
+}
+
+function closeModalWindow(){
+
+}
 loadBalance();
 
 loadOperation();
+
+
