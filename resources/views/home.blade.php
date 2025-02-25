@@ -5,7 +5,14 @@
         <h2>Добавление дохода</h2>
     </div>
     <div class="modal-body">
-        <p>Здесь будут категории</p>
+        <div class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown()" id="dropdown-button">Меню</button>
+            <div class="dropdown-content" id="dropdownMenu">
+                <a href="#">Опция 1</a>
+                <a href="#">Опция 2</a>
+                <a href="#">Опция 3</a>
+            </div>
+        </div>
     </div>
     <div class="modal-footer">
         <button class="btn cancel">Закрыть</button>

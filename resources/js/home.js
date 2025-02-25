@@ -77,10 +77,25 @@ function closeModal() {
 
 document.getElementById('incomeBtn').addEventListener('click', openModal);
 document.getElementById('expenceBtn').addEventListener('click', openModal);
+documenbt.getElementById('dropdown-button').addEventListener('click',toggleDropdown);
 
 document.querySelector('.btn.cancel').addEventListener('click', closeModal);
+
 
 document.addEventListener('DOMContentLoaded', function () {
     loadBalance();
     loadOperation();
 });
+
+function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-button')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].classList.remove('show');
+        }
+    }
+}
